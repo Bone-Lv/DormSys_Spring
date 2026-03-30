@@ -108,7 +108,10 @@ public class StudentServiceImpl implements StudentService {
      */
     @Override
     public PageResult<RepairOrder> listByStudentId(String studentId, RepairOrderQueryParam repairOrderQueryParam) {
-        PageHelper.startPage(1,10);//设置分页参数
+        log.info("查看学生报修记录，学号：{}", studentId);
+        int page = repairOrderQueryParam.getPage();
+        int pageSize = repairOrderQueryParam.getPageSize();
+        PageHelper.startPage(page,pageSize);//设置分页参数
         String status = repairOrderQueryParam.getStatus();
         LocalDate startTime = repairOrderQueryParam.getStartTime();
         LocalDate endTime = repairOrderQueryParam.getEndTime();
