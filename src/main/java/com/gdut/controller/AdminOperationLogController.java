@@ -6,13 +6,11 @@ import com.gdut.pojo.AdminOperationLog;
 import com.gdut.pojo.PageResult;
 import com.gdut.pojo.Result;
 import com.gdut.service.AdminLogService;
-import com.github.pagehelper.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 @RequestMapping("/admin/log")

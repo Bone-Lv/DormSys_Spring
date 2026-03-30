@@ -1,7 +1,6 @@
 package com.gdut.controller;
 
 import com.gdut.annotation.RequireRole;
-import com.gdut.mapper.RepairOrderMapper;
 import com.gdut.pojo.*;
 import com.gdut.service.StudentService;
 import com.gdut.util.AliyunOSSOperator;
@@ -19,9 +18,7 @@ import org.springframework.web.bind.annotation.*;
 public class StudentController {
     @Autowired
     private StudentService studentService;
-    
-    @Autowired
-    private AliyunOSSOperator aliyunOSSOperator;
+
     
     /**
      * 修改学生宿舍号

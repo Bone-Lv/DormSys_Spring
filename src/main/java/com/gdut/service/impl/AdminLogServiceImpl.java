@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
+
 
 @Service
 public class AdminLogServiceImpl implements AdminLogService {
@@ -33,6 +33,7 @@ public class AdminLogServiceImpl implements AdminLogService {
         Integer page = queryParam.getPage();
         Integer pageSize = queryParam.getPageSize();
         //分页插件分页
+
         PageHelper.startPage(page,pageSize);
         Page<AdminOperationLog> list = (Page<AdminOperationLog>) adminOperationLogMapper
                 .list(queryParam);
