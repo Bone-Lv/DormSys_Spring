@@ -4,21 +4,23 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class RepairOrderQueryParam {
-    private String status;
+@NoArgsConstructor
+public class AdminLogQueryParam {
+    private String adminId;
+    private String operation;
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate startTime;
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endTime;
-    private String dormNum;
-    private Integer page;
-    private Integer pageSize;
+    private Integer page ;
+    private Integer pageSize ;
 
 }

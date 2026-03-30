@@ -1,112 +1,114 @@
 package com.gdut.service.impl;
 
-import com.gdut.dao.UserMapper;
-import com.gdut.pojo.Admin;
-import com.gdut.pojo.Student;
+import com.gdut.mapper.UserMapper;
+import com.gdut.pojo.LoginInfo;
+import com.gdut.pojo.PasswordQueryParam;
 import com.gdut.pojo.User;
 import com.gdut.service.UserService;
-import com.gdut.util.SqlSessionFactoryUtils;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
+import com.gdut.util.JwtUtil;
+import com.gdut.util.PasswordUtil;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
+@Service
 public class UserServiceImpl implements UserService {
 
-    //获取sqlSessionFactory对象
-    private final SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory() ;
+    @Autowired
+    private UserMapper userMapper;
 
-    //当前用户信息
-    private User currentUser;
-
-
-    //登录
+    /**
+     * 登录
+     * @param user 用户
+     * @return 登录信息
+     */
     @Override
-    public boolean login(User user) {
-        //创建 SqlSession
-        SqlSession sqlSession = factory.openSession();
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+    public LoginInfo login(User user) {
 
-        Scanner scanner = new Scanner(System.in);
+        //返回是否有该用户
+        User u =userMapper.selectByIdAndPassword(user);
 
+        //判断是否登陆成功
+        if (u != null) {
+            //登陆成功
+            Map<String, Object> claims = new HashMap<>();
+            claims.put("id", u.getId());
+            claims.put("role", u.getRole());
+            //添加原始密码
+//            claims.put("password", u.getDecodePassword());
+            String token = JwtUtil.generateToken(claims);
+            return new LoginInfo(u.getId(), u.getRole(), token);
 
-        //查询数据库中的用户
-        User user1 = mapper.SelectById(user.getId());
-
-        if (user1 == null) {
-            //用户不存在
-            System.out.println("账号不存在！");
-            sqlSession.close();
-            return false;
         }
-
-
-        //验证密码
-        if (!user.getPassword().equals(user1.getPassword())) {
-
-            //密码错误
-            sqlSession.close();
-            return false;
-        }
-
-
-        //判断是否为第一次登录
-        if(user1.getDormNum() == null && user1.getRole().equals("学生")){
-            System.out.print("用户第一次登录，请输入宿舍号：");
-            String dormNum = scanner.nextLine();
-            user.setDormNum(dormNum);
-
-            //将宿舍信息上传至数据库
-            int flag = mapper.updateDormNum(user1.getId(),dormNum);
-            if(flag == 1){
-                System.out.println("宿舍信息上传成功！");
-                sqlSession.commit();
-            }else{
-                System.out.println("宿舍信息上传失败！");
-            }
-        }
-
-        //释放资源
-        sqlSession.close();
-        this.setCurrentUser(user1);
-        return true;
-
+        return null;
     }
 
-    // 注册
+    /**
+     * 注册
+     * @param user 用户
+     * @return 注册成功与否
+     */
     @Override
     public boolean register(User user) {
 
-        //创建SqlSession
-        SqlSession sqlSession = factory.openSession();
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User u =userMapper.selectById(user.getId());
 
-        Scanner scanner = new Scanner(System.in);
+        if(u ==null){
+            //数据库没有该用户允许注册
+                //填充基本数据
 
-        //查询数据库里是否有该用户
-        User user1 = mapper.SelectById(user.getId());
-
-        if(user1 ==null){
-            //用户不存在
-            if(mapper.addUser(user) == 1){
-                sqlSession.commit();
-
+            //判断当前角色
+            if(user.getId().startsWith("3225")||user.getId().startsWith("3125")){
+                user.setRole("student");
+            }else if(user.getId().startsWith("0025")){
+                user.setRole("admin");
+            }else{
+                return false;
             }
+            user.setCodePassword(user.getPassword());
+            return userMapper.addUser(user) == 1;
         }
+        //数据库中已有该角色
+        return false;
 
-        //释放资源
-        sqlSession.close();
-        return user1==null;
+    }
+
+    /**
+     * 修改密码
+     * @param request 请求
+     * @param passwordQueryParam 密码参数
+     * @return 修改成功与否
+     */
+    @Override
+    public boolean changePassword(HttpServletRequest request, PasswordQueryParam passwordQueryParam) {
+        //获得当前用户id
+        String id = JwtUtil.getCurrentUserId(request);
+        User user = userMapper.selectById(id);
+
+        //比对用户输入密码是否与原密码相同
+        String OriginalPassword = user.getDecodePassword();
+        String oldPassword = passwordQueryParam.getOldPassword();
+        String newPassword = passwordQueryParam.getNewPassword();
+
+        if(OriginalPassword.equals(oldPassword)){
+            //密码相同，修改密码
+            user.setCodePassword(newPassword);
+            int success = userMapper.updatePassword(user);
+            return success > 0;
+        }
+        //密码不同
+        return false;
     }
 
     @Override
-    public User getCurrentUser() {
-        return  currentUser;
-    }
-
-    @Override
-    public void setCurrentUser(User user) {
-        this.currentUser = user;
+    public User getCurrentUserInfo(HttpServletRequest req) {
+        //获取当前用户id
+        String id = JwtUtil.getCurrentUserId(req);
+        //获取当前用户 信息
+        return userMapper.selectById(id);
     }
 
 }

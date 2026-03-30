@@ -19,6 +19,12 @@ target/
 *.iml
 *.ipr
 
+### 忽略.env文件
+.env
+*.env.local
+
+
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

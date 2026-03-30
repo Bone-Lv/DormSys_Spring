@@ -4,12 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.servlet.context.ServletComponentScan;
 
-@ServletComponentScan
 @SpringBootApplication
-public class TilasApplication {
+@ServletComponentScan
+public class DormSysApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TilasApplication.class, args);
+        SpringApplication.run(DormSysApplication.class, args);
     }
-
 }

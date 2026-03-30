@@ -1,49 +1,45 @@
 package com.gdut.service;
 
+import com.gdut.pojo.PageResult;
 import com.gdut.pojo.RepairOrder;
+import com.gdut.pojo.RepairOrderQueryParam;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public interface StudentService {
 
-    /**
-     * 绑定或修改宿舍
-     * @param studentId 学号
-     * @param dormitoryInfo 宿舍信息
-     * @return 操作结果
-     */
-    boolean bindOrModifyDormitory(String studentId, String dormitoryInfo);
 
     /**
      * 创建报修单
      * @param repairOrder 报修单信息
      * @return 操作结果
      */
-    boolean createRepairOrder(RepairOrder repairOrder);
+    boolean createRepairOrder(RepairOrder repairOrder,HttpServletRequest req);
+
+
 
     /**
-     * 查看报修记录
-     * @param studentId 学号
-     */
-    ArrayList<RepairOrder> viewMyRepairRecords(String studentId);
-
-    /**
-     * 取消报修单
-     * @param repairId 报修单 ID
-     * @param studentId 学号
+     * 修改宿舍号
+     * @param id 学号
+     * @param dormNum 宿舍号
      * @return 操作结果
      */
-    boolean cancelRepairOrder(int repairId, String studentId);
+    boolean changeDormNum(String id, String dormNum);
 
     /**
-     * 修改密码
-     * @param studentId 学号
-     * @param oldPassword 原密码
-     * @param newPassword 新密码
+     * 修改保修单
+     * @param repairOrder 报修单信息
      * @return 操作结果
      */
-    boolean changePassword(String studentId, String oldPassword, String newPassword);
+    boolean updateRepairOrder(RepairOrder repairOrder);
+    /**
+     * 根据学生ID查询报修单
+     * @param id 学号
+     * @param repairOrderQueryParam 报修单查询参数
+     * @return 报修单列表
+     */
+    PageResult<RepairOrder> listByStudentId(String id, RepairOrderQueryParam repairOrderQueryParam);
 }
 
 

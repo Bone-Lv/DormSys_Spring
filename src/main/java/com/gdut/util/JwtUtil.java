@@ -3,20 +3,25 @@ package com.gdut.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Base64;
 import java.util.Date;
 import java.util.Map;
 
+
 /**
  * JWT 令牌工具类
  * 用于生成和解析 JWT 令牌
  */
+@Slf4j
 public class JwtUtil {
     
     private static final String SECRET_KEY = Base64.getEncoder().encodeToString("Bone".getBytes());
     
-    private static final long EXPIRATION_TIME = 12 * 60 * 60 * 1000;
+    private static final long EXPIRATION_TIME = 2 * 60 * 60 * 1000;
+
     
     /**
      * 生成 JWT 令牌
@@ -71,12 +76,55 @@ public class JwtUtil {
             return false;
         }
     }
-    
+
+
     /**
-     * 获取过期时间（毫秒）
-     * @return 过期时间毫秒数
+     * 获取当前用户ID
+     * @param req HttpServletRequest 对象
+     * @return 当前用户ID
      */
-    public static long getExpirationTime() {
-        return EXPIRATION_TIME;
+    public static String getCurrentUserId(HttpServletRequest req) {
+        String token = req.getHeader("token");
+        
+        if (token == null || token.isEmpty()) {
+            throw new RuntimeException("Token 不能为空");
+        }
+        
+        return getClaim(token, "id").toString();
     }
+
+
+    /**
+     * 判断当前令牌是否需要刷新（剩余时间少于 30 分钟就刷新）
+     */
+    public static boolean needRefresh(String token) {
+        try {
+            Claims claims = parseToken(token);
+            Date expiration = claims.getExpiration();
+            long remainingTime = expiration.getTime() - System.currentTimeMillis();
+            log.info("剩余时间: {}", remainingTime);
+            
+            // 剩余时间少于 30 分钟，需要刷新
+            return remainingTime < 30 * 60 * 1000 && remainingTime > 0;
+        } catch (Exception e) {
+            // 解析失败说明令牌已过期或无效，不需要刷新，直接返回 false
+            return false;
+        }
+    }
+
+    /**
+     * 刷新令牌（重新生成一个新的令牌，延长过期时间）
+     */
+    public static String refreshToken(String token) {
+        try {
+            Claims claims = parseToken(token);
+            return generateToken(claims);
+        } catch (Exception e) {
+            //解析不了说明令牌已经过期了
+            return null;
+        }
+    }
+
+
+
 }

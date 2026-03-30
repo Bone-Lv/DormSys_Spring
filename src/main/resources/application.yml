@@ -1,12 +1,12 @@
 spring:
   application:
-    name: Tlias
+    name: DormSys
   #数据库的连接信息
   datasource:
-    url: jdbc:mysql://localhost:3306/tlias
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 123456
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
 #Mybatis 的相关配置
 mybatis:
@@ -18,7 +18,7 @@ mybatis:
 #阿里云的参数配置
 aliyun:
   oss:
-    endpoint: https://oss-cn-beijing.aliyuncs.com
-    bucketName: tlias-lv
-    region: cn-beijing
+    endpoint: ${ALIYUN_OSS_ENDPOINT}
+    bucketName: ${ALIYUN_OSS_BUCKET}
+    region: ${ALIYUN_OSS_REGION}
 

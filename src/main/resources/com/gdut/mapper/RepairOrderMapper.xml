@@ -2,7 +2,99 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.gdut.dao.RepairOrderMapper">
+<mapper namespace="com.gdut.mapper.RepairOrderMapper">
+    <update id="update">
+        update repair_order
+        <set>
+            <if test = "status != null and status != ''">
+                status = #{status},
+            </if>
+            <if test = "updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test = "adminId != null and adminId != ''">
+                admin_id = #{adminId},
+            </if>
+            <if test = "description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test = "deviceType != null and deviceType != ''">
+                device_type = #{deviceType},
+            </if>
+            <if test = "dormNum != null and dormNum != ''">
+                dorm_num = #{dormNum},
+            </if>
+            <if test = "image !=null and image != ''">
+                image = #{image},
+            </if>
+        </set>
+
+        where id = #{id}
+    </update>
+    <delete id="delete">
+        delete from repair_order where id in
+        <foreach item="id" collection="ids" separator="," close=")" open="(" index="">
+            #{id}
+        </foreach>
+    </delete>
 
 
+    <select id="selectAll" resultType="com.gdut.pojo.RepairOrder">
+        select * from repair_order order by
+                                       case when status = '待处理' then 1
+                                           when status = '处理中' then 2
+                                           when status = '待确认' then 3
+                                           when status = '已完成' then 4
+                                           when status = '已取消' then 5
+                                           else 6
+                                       end
+    </select>
+
+    <select id="list" resultType="com.gdut.pojo.RepairOrder">
+        select device_type,description,status,update_time,dorm_num,id from repair_order
+        <where>
+            <if test="status != null and status != '' ">
+                and status = #{status}
+            </if>
+            <if test="startTime != null and endTime != null">
+                and update_time between #{startTime} and #{endTime}
+            </if>
+            <if test="dormNum != null and dormNum !='' ">
+                and dorm_num like concat('%',#{dormNum},'%')
+            </if>
+        </where>
+        order by
+            case when status = '待处理' then 1
+            when status = '处理中' then 2
+            when status = '待确认' then 3
+            when status = '已完成' then 4
+            when status = '已取消' then 5
+            else 6
+            end ,
+            update_time desc
+    </select>
+    <select id="listByStudentId" resultType="com.gdut.pojo.RepairOrder">
+        select * from repair_order
+        <where>
+            <if test="status != null and status != '' ">
+                and status = #{status}
+            </if>
+            <if test="startTime != null and endTime != null">
+                and update_time between #{startTime} and #{endTime}
+            </if>
+            <if test="dormNum != null and dormNum != '' ">
+                and dorm_num like concat('%',#{dormNum},'%')
+            </if>
+             and student_id = #{studentId}
+        </where>
+        order by
+        case when status = '待处理' then 1
+        when status = '处理中' then 2
+        when status = '待确认' then 3
+        when status = '已完成' then 4
+        when status = '已取消' then 5
+        else 6
+        end ,
+        update_time desc
+    </select>
 </mapper>

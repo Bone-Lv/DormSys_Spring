@@ -1,17 +1,32 @@
 package com.gdut.service;
 
+import com.gdut.pojo.LoginInfo;
+import com.gdut.pojo.PasswordQueryParam;
 import com.gdut.pojo.User;
+import jakarta.servlet.http.HttpServletRequest;
 
 public interface UserService {
-    //登陆
-     boolean login(User user);
+    /**
+     * 登录
+     * @param user 用户信息
+     * @return 登录信息
+     */
+     LoginInfo login(User user);
 
-     //注册
+    /**
+     *  注册
+     * @param user 用户信息
+     * @return 操作结果
+     */
      boolean register(User user);
 
-     //获取当前登陆的用户
-     User getCurrentUser();
+    /**
+     * 修改密码
+     * @param request 请求
+     * @param passwordQueryParam 新旧密码
+     * @return 操作结果
+     */
+    boolean changePassword(HttpServletRequest request, PasswordQueryParam passwordQueryParam);
 
-     //设置当前登陆的用户
-      void setCurrentUser(User user);
+    User getCurrentUserInfo(HttpServletRequest req);
 }

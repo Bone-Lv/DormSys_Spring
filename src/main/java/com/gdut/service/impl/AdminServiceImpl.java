@@ -1,108 +1,79 @@
 package com.gdut.service.impl;
 
-import com.gdut.dao.RepairOrderMapper;
-import com.gdut.dao.UserMapper;
-import com.gdut.enums.RepairOrderStatus;
+import com.gdut.mapper.RepairOrderMapper;
+import com.gdut.pojo.PageResult;
 import com.gdut.pojo.RepairOrder;
-import com.gdut.pojo.User;
+import com.gdut.pojo.RepairOrderQueryParam;
 import com.gdut.service.AdminService;
-import com.gdut.util.PasswordUtil;
-import com.gdut.util.SqlSessionFactoryUtils;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
+import com.gdut.util.JwtUtil;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
+@Slf4j
+@Service
 public class AdminServiceImpl implements AdminService {
-    //获取factory对象
-    private final SqlSessionFactory factory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
-    private User currentUser;
-
-    public AdminServiceImpl() {
-    }
-
-    public AdminServiceImpl(User user) {
-        this.currentUser = user;
-    }
+    @Autowired
+    private RepairOrderMapper repairOrderMapper;
 
 
 
-
-    @Override
-    public ArrayList<RepairOrder> viewAllRepairOrders() {
-        //获取SqlSession对象
-         SqlSession sqlSession = factory.openSession();
-         RepairOrderMapper mapper = sqlSession.getMapper(RepairOrderMapper.class);
-        ArrayList<RepairOrder> repairOrders = mapper.selectAll();
-        //释放资源
-         sqlSession.close();
-
-        return repairOrders;
-    }
-
+    /**
+     * 查看报修单详情
+     */
     @Override
     public RepairOrder viewRepairOrderDetail(int repairId) {
-        //获取SqlSession对象
-        SqlSession sqlSession = factory.openSession();
-        RepairOrderMapper mapper = sqlSession.getMapper(RepairOrderMapper.class);
-        RepairOrder repairOrder = mapper.selectById(repairId);
-
-        //释放资源
-        sqlSession.close();
-
-        return repairOrder;
+        return repairOrderMapper.selectById(repairId);
     }
+
+    /**
+     * 更新报修单
+     */
+    @Override
+    public boolean updateRepairOrder(RepairOrder repairOrder,HttpServletRequest req) {
+        //填充基本信息
+        repairOrder.setUpdateTime(LocalDateTime.now());
+        repairOrder.setAdminId(JwtUtil.getCurrentUserId( req));
+        //修改报修单
+        int success = repairOrderMapper.update(repairOrder);
+        return success == 1;
+    }
+
+    /**
+     * 批量删除报修单
+     */
 
     @Override
-    public boolean updateRepairOrderStatus(int repairId, String status) {
-        //获取sqlsession对象
-        SqlSession sqlSession = factory.openSession();
-        RepairOrderMapper mapper = sqlSession.getMapper(RepairOrderMapper.class);
-
-        //判断有无该订单
-        RepairOrder repairOrder1 = mapper.selectById(repairId);
-        if (repairOrder1 == null)return false;
-
-        if (RepairOrderStatus.fromDescription(status) == null) {
-            System.out.println("❌ 无效的状态值：" + status);
-            return false;
-        }
-
-        RepairOrder repairOrder = new RepairOrder();
-        repairOrder.setId(repairId);
-        repairOrder.setStatus(status);
-        repairOrder.setAdminId(currentUser.getId());
-
-        int result = mapper.update(repairOrder);
-        if(result == 1){
-            sqlSession.commit();
-        }else{
-            sqlSession.rollback();
-        }
-        sqlSession.close();
-        return result == 1;
+    public boolean deleteRepairOrder(ArrayList<Integer> ids) {
+        return repairOrderMapper.delete(ids) >0;
     }
 
+    /**
+     * 查看符合条件的报修单
+     */
     @Override
-    public boolean deleteRepairOrder(int repairId) {
-        //获取sqlsession对象
-        SqlSession sqlSession = factory.openSession();
-        RepairOrderMapper mapper = sqlSession.getMapper(RepairOrderMapper.class);
+    public PageResult<RepairOrder> list(RepairOrderQueryParam repairOrderQueryParam) {
 
-        int result = mapper.delete(repairId);
-        if(result == 1){
-            sqlSession.commit();
-        }else{
-            sqlSession.rollback();
-        }
-        sqlSession.close();
+        //设置分页参数
+        int page = repairOrderQueryParam.getPage();
+        int pageSize = repairOrderQueryParam.getPageSize();
+        PageHelper.startPage(page,pageSize);
 
-        return result == 1;
+        Page<RepairOrder> list = (Page<RepairOrder>) repairOrderMapper.list(repairOrderQueryParam);
+
+        return new PageResult<>(list.getTotal(),list.getResult());
+
     }
 
-    @Override
-    public boolean changePassword(String adminId, String oldPassword, String newPassword) {
-        return false;
-    }
+
 }

@@ -27,17 +27,18 @@ public class Result {
         return result;
     }
 
-    public static Result fail(String msg) {
+    public static Result fail(Object data) {
         Result result = new Result();
         result.setCode(0);
         result.setMsg("操作失败");
+        result.setData(data);
         return result;
     }
 
-    public static Result fail() {
+    public static Result fail(String msg) {
         Result result = new Result();
         result.setCode(0);
-        result.setMsg("操作失败");
+        result.setMsg(msg);
         return result;
     }
 }

@@ -1,8 +1,13 @@
-package com.gdut.dao;
+package com.gdut.mapper;
 
 import com.gdut.pojo.User;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
+@Mapper
 public interface UserMapper {
 
    //添加用户
@@ -11,18 +16,15 @@ public interface UserMapper {
 
     //查询用户
     @Select("select * from user where id = #{id}")
-//    @Results(id = "userMap", value = {
-//            @Result(property = "dormNum", column = "dorm_num")
-//    })
-    User SelectById(@Param("id") String id);
+    User selectById(@Param("id") String id);
 
     //修改用户
-    @Insert("update user set password = #{password} where id = #{id}")
-    int updatePassword(@Param("id") String id, @Param("password") String password);
+    @Update("update user set password = #{password} where id = #{id}")
+    int updatePassword(User user);
 
-    //修改用户宿舍号
-    @Insert("update user set dorm_num = #{dormNum} where id = #{id}")
+    @Update("update user set dorm_num = #{dormNum} where id = #{id}")
     int updateDormNum(@Param("id") String id, @Param("dormNum") String dormNum);
 
-
+    @Select("select * from user where id = #{id} and password = #{password}")
+    User selectByIdAndPassword(User user);
 }
