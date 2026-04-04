@@ -49,6 +49,7 @@ public class LoginController {
         return success? Result.success("注册成功！请返回登录界面登录。") : Result.fail("该用户已注册！");
     }
 
+
     /**
      * 修改密码
      */

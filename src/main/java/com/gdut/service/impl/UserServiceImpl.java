@@ -38,7 +38,6 @@ public class UserServiceImpl implements UserService {
             claims.put("id", u.getId());
             claims.put("role", u.getRole());
             //添加原始密码
-//            claims.put("password", u.getDecodePassword());
             String token = JwtUtil.generateToken(claims);
             return new LoginInfo(u.getId(), u.getRole(), token);
 

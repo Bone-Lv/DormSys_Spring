@@ -65,9 +65,7 @@ public class StudentServiceImpl implements StudentService {
      */
 
     @Override
-    @Transactional(rollbackFor = Exception.class)
-    public boolean createRepairOrder(RepairOrder repairOrder,HttpServletRequest request) {
-        String imageUrl = null;
+    public boolean createRepairOrder(RepairOrder repairOrder, HttpServletRequest request) {
         try {
             //获取当前角色 id
             String id = JwtUtil.getCurrentUserId(request);
@@ -80,14 +78,15 @@ public class StudentServiceImpl implements StudentService {
             repairOrder.setDormNum(user.getDormNum());
 
             int success = repairOrderMapper.insert(repairOrder);
-            if (success > 0) return true;
+            return success > 0;
             
-            throw new RuntimeException("数据库插入失败");
         } catch (Exception e) {
             log.error("创建报修单失败，需要清理 OSS 文件", e);
+            
+            // 清理已上传的 OSS 文件
             if (repairOrder.getImage() != null && !repairOrder.getImage().isEmpty()) {
                 try {
-                    String objectKey =  aliyunOSSOperator.extractObjectKeyFromUrl(repairOrder.getImage());
+                    String objectKey = aliyunOSSOperator.extractObjectKeyFromUrl(repairOrder.getImage());
                     aliyunOSSOperator.deleteFile(objectKey);
                     log.info("已删除 OSS 文件：{}", objectKey);
                 } catch (Exception ex) {

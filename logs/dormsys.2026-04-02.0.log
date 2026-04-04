@@ -1,0 +1,872 @@
+2026-04-02 19:04:23.650 [main] INFO  com.gdut.DormSysApplication - Starting DormSysApplication using Java 21.0.10 with PID 36844 (D:\code\java\java\DormSys_Spring\target\classes started by Bone in D:\code\java\java\DormSys_Spring)
+2026-04-02 19:04:23.654 [main] INFO  com.gdut.DormSysApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-02 19:04:24.381 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-02 19:04:24.390 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-02 19:04:24.392 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-02 19:04:24.392 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-02 19:04:24.424 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 724 ms
+2026-04-02 19:04:24.867 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-02 19:04:24.879 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-02 19:04:24.882 [main] INFO  com.gdut.DormSysApplication - Started DormSysApplication in 1.646 seconds (process running for 2.456)
+2026-04-02 19:04:44.565 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-02 19:04:44.565 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-02 19:04:44.565 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-02 19:04:44.589 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 19:04:44.589 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 19:04:44.589 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTA1OTE1MywiaWF0IjoxNzc1MDUxOTUzfQ.ts_44LyecG5w6d7njdiRdr2LCC4TjFsYf3gV_FOaiQA
+2026-04-02 19:04:44.589 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTA1OTE1MywiaWF0IjoxNzc1MDUxOTUzfQ.ts_44LyecG5w6d7njdiRdr2LCC4TjFsYf3gV_FOaiQA
+2026-04-02 19:04:45.116 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌无效，响应401
+2026-04-02 19:04:45.116 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌无效，响应401
+2026-04-02 19:05:02.084 [http-nio-8080-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-02 19:05:02.531 [http-nio-8080-exec-9] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@790b41b2
+2026-04-02 19:05:02.533 [http-nio-8080-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-02 19:05:02.731 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 19:05:02.731 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzNTEwMiwiaWF0IjoxNzc1MTI3OTAyfQ.B3xyg3kw73MxRdCjg_mmFBwtvFgXrV9dnePd5Rp19fE
+2026-04-02 19:05:02.733 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199267
+2026-04-02 19:05:02.734 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 19:05:02.734 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 19:05:02.736 [http-nio-8080-exec-4] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 19:05:04.000 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 19:05:04.001 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzNTEwMiwiaWF0IjoxNzc1MTI3OTAyfQ.B3xyg3kw73MxRdCjg_mmFBwtvFgXrV9dnePd5Rp19fE
+2026-04-02 19:05:04.002 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7197998
+2026-04-02 19:05:04.002 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 19:05:04.002 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 19:05:04.002 [http-nio-8080-exec-5] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 19:05:04.698 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 19:05:04.698 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzNTEwMiwiaWF0IjoxNzc1MTI3OTAyfQ.B3xyg3kw73MxRdCjg_mmFBwtvFgXrV9dnePd5Rp19fE
+2026-04-02 19:05:04.699 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 7197301
+2026-04-02 19:05:04.699 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 19:05:04.699 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 19:05:04.699 [http-nio-8080-exec-7] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 19:05:06.084 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 19:05:06.084 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzNTEwMiwiaWF0IjoxNzc1MTI3OTAyfQ.B3xyg3kw73MxRdCjg_mmFBwtvFgXrV9dnePd5Rp19fE
+2026-04-02 19:05:06.087 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7195913
+2026-04-02 19:05:06.087 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 19:05:06.087 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 19:05:06.097 [http-nio-8080-exec-6] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 19:05:06.098 [http-nio-8080-exec-6] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 19:05:06.100 [http-nio-8080-exec-6] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 19:05:10.948 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 19:05:10.948 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzNTEwMiwiaWF0IjoxNzc1MTI3OTAyfQ.B3xyg3kw73MxRdCjg_mmFBwtvFgXrV9dnePd5Rp19fE
+2026-04-02 19:05:10.950 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7191050
+2026-04-02 19:05:10.950 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 19:05:10.950 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 19:05:10.953 [http-nio-8080-exec-8] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：16
+2026-04-02 19:05:45.994 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02 19:05:46.000 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-02 19:05:46.003 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-02 19:05:46.008 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-02 19:56:02.846 [main] INFO  com.gdut.DormSysApplication - Starting DormSysApplication using Java 21.0.10 with PID 18552 (D:\code\java\java\DormSys_Spring\target\classes started by Bone in D:\code\java\java\DormSys_Spring)
+2026-04-02 19:56:02.851 [main] INFO  com.gdut.DormSysApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-02 19:56:04.740 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-02 19:56:04.759 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-02 19:56:04.761 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-02 19:56:04.761 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-02 19:56:04.818 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1902 ms
+2026-04-02 19:56:07.169 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-02 19:56:07.202 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-02 19:56:07.211 [main] INFO  com.gdut.DormSysApplication - Started DormSysApplication in 4.874 seconds (process running for 6.063)
+2026-04-02 19:56:09.253 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-02 19:56:09.261 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-02 19:56:09.263 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-02 19:56:09.649 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-02 19:56:10.452 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c5e12cb
+2026-04-02 19:56:10.456 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-02 19:56:12.766 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 19:56:12.767 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzgxNzEsImlhdCI6MTc3NTEzMDk3MX0.zl-hoyL-ioiurORoUuNhEoo8dLtTzIErE2tOLFRcHpo
+2026-04-02 19:56:12.841 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7198159
+2026-04-02 19:56:12.842 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 19:56:12.842 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 19:56:12.846 [http-nio-8080-exec-3] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:00:08.546 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:00:08.547 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQwOCwiaWF0IjoxNzc1MTMxMjA4fQ.TRp9Il6nwVE4LpLjPLZ6ydxe_Sxryd3qQiED8n7bgMQ
+2026-04-02 20:00:08.552 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199448
+2026-04-02 20:00:08.553 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:00:08.553 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:00:08.553 [http-nio-8080-exec-5] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:00:14.290 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:00:14.298 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQwOCwiaWF0IjoxNzc1MTMxMjA4fQ.TRp9Il6nwVE4LpLjPLZ6ydxe_Sxryd3qQiED8n7bgMQ
+2026-04-02 20:00:14.319 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7193681
+2026-04-02 20:00:14.320 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:00:14.321 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:00:14.322 [http-nio-8080-exec-6] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:00:20.039 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:00:20.041 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQwOCwiaWF0IjoxNzc1MTMxMjA4fQ.TRp9Il6nwVE4LpLjPLZ6ydxe_Sxryd3qQiED8n7bgMQ
+2026-04-02 20:00:20.046 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 7187954
+2026-04-02 20:00:20.046 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:00:20.046 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:00:20.056 [http-nio-8080-exec-7] INFO  c.gdut.controller.StudentController - 修改学生宿舍号，学号：3125004500，宿舍号：西一330
+2026-04-02 20:00:22.070 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:00:22.072 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQwOCwiaWF0IjoxNzc1MTMxMjA4fQ.TRp9Il6nwVE4LpLjPLZ6ydxe_Sxryd3qQiED8n7bgMQ
+2026-04-02 20:00:22.074 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7185926
+2026-04-02 20:00:22.074 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:00:22.074 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:00:22.074 [http-nio-8080-exec-8] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:00:42.880 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:00:42.881 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQwOCwiaWF0IjoxNzc1MTMxMjA4fQ.TRp9Il6nwVE4LpLjPLZ6ydxe_Sxryd3qQiED8n7bgMQ
+2026-04-02 20:00:42.884 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 7165116
+2026-04-02 20:00:42.884 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:00:42.884 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:00:42.954 [http-nio-8080-exec-9] INFO  com.gdut.controller.LoginController - 修改密码
+2026-04-02 20:01:05.253 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:01:05.253 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:05.256 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199744
+2026-04-02 20:01:05.256 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:05.256 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:01:05.256 [http-nio-8080-exec-1] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:01:07.854 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:07.854 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:07.861 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7197139
+2026-04-02 20:01:07.869 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:07.870 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:07.941 [http-nio-8080-exec-2] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:07.943 [http-nio-8080-exec-2] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:07.948 [http-nio-8080-exec-2] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:14.813 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:14.815 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:14.818 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7190182
+2026-04-02 20:01:14.819 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:14.819 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:14.823 [http-nio-8080-exec-3] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:14.823 [http-nio-8080-exec-3] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:14.823 [http-nio-8080-exec-3] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=处理中, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:24.161 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:24.163 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:24.171 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7180829
+2026-04-02 20:01:24.172 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:24.172 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:24.252 [http-nio-8080-exec-4] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:24.252 [http-nio-8080-exec-4] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:24.252 [http-nio-8080-exec-4] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=处理中, startTime=2026-03-05, endTime=2026-05-07, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:25.135 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:25.138 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:25.155 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7179845
+2026-04-02 20:01:25.155 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:25.155 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:25.168 [http-nio-8080-exec-5] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:25.168 [http-nio-8080-exec-5] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:25.168 [http-nio-8080-exec-5] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=处理中, startTime=2026-03-05, endTime=2026-05-07, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:44.035 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:44.035 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:44.038 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7160962
+2026-04-02 20:01:44.038 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:44.038 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:44.041 [http-nio-8080-exec-6] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:44.041 [http-nio-8080-exec-6] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:44.041 [http-nio-8080-exec-6] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=处理中, startTime=2026-02-11, endTime=2026-04-02, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:44.753 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:44.755 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:44.762 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 7160238
+2026-04-02 20:01:44.763 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:44.764 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:44.770 [http-nio-8080-exec-7] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:44.770 [http-nio-8080-exec-7] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:44.770 [http-nio-8080-exec-7] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=处理中, startTime=2026-02-11, endTime=2026-04-02, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:54.844 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:54.845 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:54.848 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7150152
+2026-04-02 20:01:54.848 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:54.848 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:54.853 [http-nio-8080-exec-8] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:54.853 [http-nio-8080-exec-8] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:54.853 [http-nio-8080-exec-8] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=处理中, startTime=2026-02-20, endTime=2026-03-26, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:01:59.149 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:01:59.149 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:01:59.153 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 7145847
+2026-04-02 20:01:59.153 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:01:59.153 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:01:59.156 [http-nio-8080-exec-9] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:59.157 [http-nio-8080-exec-9] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:01:59.157 [http-nio-8080-exec-9] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:02:21.301 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:02:21.301 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:02:21.304 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7123696
+2026-04-02 20:02:21.304 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:02:21.304 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:02:21.308 [http-nio-8080-exec-10] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：16
+2026-04-02 20:02:42.606 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:02:42.607 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:02:42.608 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7102392
+2026-04-02 20:02:42.609 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:02:42.611 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:02:42.613 [http-nio-8080-exec-1] INFO  c.gdut.controller.UploadController - 上传文件屏幕截图 2025-10-29 132046.png
+2026-04-02 20:03:02.779 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:03:02.781 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:03:02.783 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7082217
+2026-04-02 20:03:02.783 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:03:02.783 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:03:02.783 [http-nio-8080-exec-2] INFO  c.gdut.controller.UploadController - 上传文件屏幕截图 2025-10-29 200418.png
+2026-04-02 20:03:10.990 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:03:10.990 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:03:10.991 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7074009
+2026-04-02 20:03:10.993 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:03:10.993 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:03:11.016 [http-nio-8080-exec-3] INFO  c.gdut.controller.StudentController - 创建报修单，报修单信息：RepairOrder{id=null, deviceType='空调', description='漏水', status='待处理', createTime=null, updateTime=null, studentId='', dormNum='', adminId='', image='https://dormmanasys-lv.oss-cn-beijing.aliyuncs.com/2026/04/0fc59581-b305-4f81-8d62-a987b9c5e4d7.png'}
+2026-04-02 20:03:11.127 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:03:11.127 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:03:11.130 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7073870
+2026-04-02 20:03:11.132 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:03:11.132 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:03:11.134 [http-nio-8080-exec-4] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:03:11.137 [http-nio-8080-exec-4] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:03:11.137 [http-nio-8080-exec-4] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:03:13.777 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:03:13.781 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:03:13.784 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7071216
+2026-04-02 20:03:13.784 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:03:13.784 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:03:13.784 [http-nio-8080-exec-5] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：19
+2026-04-02 20:06:23.305 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:06:23.305 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:06:23.305 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6881695
+2026-04-02 20:06:23.305 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:06:23.305 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:06:23.305 [http-nio-8080-exec-6] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：19
+2026-04-02 20:06:27.040 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:06:27.040 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:06:27.041 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 6877959
+2026-04-02 20:06:27.043 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:06:27.043 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:06:27.044 [http-nio-8080-exec-7] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：19
+2026-04-02 20:06:37.705 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:06:37.707 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:06:37.714 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 6867286
+2026-04-02 20:06:37.716 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:06:37.716 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:06:37.731 [http-nio-8080-exec-8] INFO  c.gdut.controller.StudentController - 更新报修单id：19
+2026-04-02 20:06:37.821 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:06:37.822 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:06:37.825 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 6867175
+2026-04-02 20:06:37.825 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:06:37.825 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:06:37.828 [http-nio-8080-exec-9] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:06:37.830 [http-nio-8080-exec-9] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:06:37.830 [http-nio-8080-exec-9] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:07:02.046 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:02.047 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:02.050 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 6842950
+2026-04-02 20:07:02.050 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:02.050 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:02.051 [http-nio-8080-exec-10] INFO  c.gdut.controller.StudentController - 创建报修单，报修单信息：RepairOrder{id=null, deviceType='阿德飒飒大大', description='撒大苏打', status='处理中', createTime=null, updateTime=null, studentId='', dormNum='', adminId='', image=''}
+2026-04-02 20:07:02.142 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:02.142 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:02.147 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 6842853
+2026-04-02 20:07:02.147 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:02.147 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:02.152 [http-nio-8080-exec-1] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:02.153 [http-nio-8080-exec-1] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:02.153 [http-nio-8080-exec-1] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:07:09.461 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:09.462 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:09.463 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 6835537
+2026-04-02 20:07:09.463 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:09.465 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:09.469 [http-nio-8080-exec-2] INFO  c.gdut.controller.StudentController - 创建报修单，报修单信息：RepairOrder{id=null, deviceType='asdasd', description='ASDAD', status='处理中', createTime=null, updateTime=null, studentId='', dormNum='', adminId='', image=''}
+2026-04-02 20:07:09.571 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:09.571 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:09.572 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 6835428
+2026-04-02 20:07:09.572 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:09.572 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:09.575 [http-nio-8080-exec-3] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:09.575 [http-nio-8080-exec-3] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:09.576 [http-nio-8080-exec-3] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:07:11.266 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:11.266 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:11.269 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 6833731
+2026-04-02 20:07:11.269 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:11.269 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:11.271 [http-nio-8080-exec-4] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:11.272 [http-nio-8080-exec-4] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:11.273 [http-nio-8080-exec-4] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=2, pageSize=10)
+2026-04-02 20:07:12.452 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:12.452 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:12.455 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 6832545
+2026-04-02 20:07:12.456 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:12.456 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:12.458 [http-nio-8080-exec-5] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:12.458 [http-nio-8080-exec-5] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:12.458 [http-nio-8080-exec-5] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 20:07:14.372 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:14.373 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:14.377 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6830623
+2026-04-02 20:07:14.381 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:14.381 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:14.384 [http-nio-8080-exec-6] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:14.386 [http-nio-8080-exec-6] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:14.386 [http-nio-8080-exec-6] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=5)
+2026-04-02 20:07:15.472 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:15.472 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:15.474 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 6829526
+2026-04-02 20:07:15.474 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:15.474 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:15.477 [http-nio-8080-exec-7] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:15.477 [http-nio-8080-exec-7] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:15.477 [http-nio-8080-exec-7] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=2, pageSize=5)
+2026-04-02 20:07:15.729 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:07:15.729 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzODQ2NSwiaWF0IjoxNzc1MTMxMjY1fQ.xxHJr4uvqeJtzhgS9IQKNI4C32M3365485lrCD39uH0
+2026-04-02 20:07:15.731 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 6829269
+2026-04-02 20:07:15.731 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:07:15.731 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:15.734 [http-nio-8080-exec-8] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:15.734 [http-nio-8080-exec-8] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:07:15.734 [http-nio-8080-exec-8] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=3, pageSize=5)
+2026-04-02 20:07:32.178 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:07:32.178 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:07:32.182 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199818
+2026-04-02 20:07:32.183 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:07:32.183 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:07:32.183 [http-nio-8080-exec-10] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:07:38.277 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:07:38.277 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:07:38.278 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7193722
+2026-04-02 20:07:38.278 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:07:38.278 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:38.281 [http-nio-8080-exec-1] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:07:50.858 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:07:50.859 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:07:50.861 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7181139
+2026-04-02 20:07:50.861 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:07:50.861 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:07:50.864 [http-nio-8080-exec-2] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:08:14.628 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:08:14.629 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:08:14.635 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7157365
+2026-04-02 20:08:14.635 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:08:14.635 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:08:14.636 [http-nio-8080-exec-3] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：21
+2026-04-02 20:08:14.668 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:08:14.668 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:08:14.670 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7157330
+2026-04-02 20:08:14.671 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:08:14.671 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:08:14.733 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 记录管理员操作日志：adminId=0025004500, operation=AdminController.deleteRepairOrder, url=/admin
+2026-04-02 20:08:14.736 [http-nio-8080-exec-4] INFO  com.gdut.controller.AdminController - 批量删除报修单，报修单编号：[21]
+2026-04-02 20:08:14.770 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:08:14.770 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:08:14.772 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7157228
+2026-04-02 20:08:14.772 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:08:14.772 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:08:14.773 [http-nio-8080-exec-5] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:12:51.221 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:12:51.222 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:12:51.224 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6880776
+2026-04-02 20:12:51.224 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:12:51.224 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:12:51.224 [http-nio-8080-exec-6] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：16
+2026-04-02 20:12:54.397 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:12:54.397 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:12:54.397 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 6877603
+2026-04-02 20:12:54.397 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:12:54.397 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:12:54.461 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 记录管理员操作日志：adminId=0025004500, operation=AdminController.updateRepairOrderStatus, url=/admin
+2026-04-02 20:12:54.465 [http-nio-8080-exec-7] INFO  com.gdut.controller.AdminController - 更新报修单状态:已完成
+2026-04-02 20:12:54.505 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:12:54.505 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:12:54.506 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 6877494
+2026-04-02 20:12:54.506 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:12:54.506 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:12:54.507 [http-nio-8080-exec-8] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:15:26.851 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:15:26.851 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:15:26.853 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 6725147
+2026-04-02 20:15:26.853 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:15:26.853 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:15:26.860 [http-nio-8080-exec-9] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:15:35.615 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:15:35.615 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:15:35.618 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 6716382
+2026-04-02 20:15:35.618 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:15:35.618 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:15:35.622 [http-nio-8080-exec-10] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:17:02.135 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:17:02.135 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:17:02.138 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 6629862
+2026-04-02 20:17:02.138 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:17:02.138 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:17:02.139 [http-nio-8080-exec-1] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:17:08.752 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:17:08.754 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:17:08.759 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 6623241
+2026-04-02 20:17:08.759 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:17:08.759 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:17:08.761 [http-nio-8080-exec-2] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:17:10.599 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:17:10.599 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:17:10.604 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 6621396
+2026-04-02 20:17:10.605 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:17:10.605 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:17:10.608 [http-nio-8080-exec-3] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:17:15.384 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:17:15.384 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:17:15.389 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 6616611
+2026-04-02 20:17:15.390 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:17:15.394 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:17:15.468 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 记录管理员操作日志：adminId=0025004500, operation=AdminOperationLogController.delete, url=/admin/log
+2026-04-02 20:17:15.468 [http-nio-8080-exec-4] INFO  c.g.c.AdminOperationLogController - 批量删除日志ids:[52, 51]
+2026-04-02 20:17:15.508 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:17:15.508 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxMzg4NTIsImlhdCI6MTc3NTEzMTY1Mn0.EH5OGSm8cdOxs1TQSn8XVSNrGcSlmgYKHDOwhkm9AEE
+2026-04-02 20:17:15.509 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 6616491
+2026-04-02 20:17:15.509 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:17:15.509 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:17:15.513 [http-nio-8080-exec-5] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:18:31.221 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:18:31.221 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:null
+2026-04-02 20:18:31.221 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌为空，响应401
+2026-04-02 20:18:41.952 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:18:41.953 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:null
+2026-04-02 20:18:41.953 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌为空，响应401
+2026-04-02 20:19:10.434 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:19:10.434 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:10.435 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199565
+2026-04-02 20:19:10.435 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:10.435 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:19:10.435 [http-nio-8080-exec-10] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:19:16.489 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:19:16.489 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:16.499 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7193501
+2026-04-02 20:19:16.504 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:16.504 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:19:16.505 [http-nio-8080-exec-1] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:19:19.505 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:19:19.506 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:19.510 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7190490
+2026-04-02 20:19:19.510 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:19.510 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:19:19.788 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:19:19.790 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:19.790 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7190210
+2026-04-02 20:19:19.790 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:19.790 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:19:22.289 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:19:22.289 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:22.291 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7187709
+2026-04-02 20:19:22.292 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:22.292 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:19:23.827 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:19:23.829 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:23.829 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7186171
+2026-04-02 20:19:23.829 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:23.829 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:19:42.614 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:19:42.614 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:19:42.615 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7167385
+2026-04-02 20:19:42.615 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:19:42.615 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:28:09.039 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:28:09.039 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:28:09.041 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 6660959
+2026-04-02 20:28:09.041 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:28:09.041 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:28:10.020 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:28:10.020 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTEzOTU1MCwiaWF0IjoxNzc1MTMyMzUwfQ.AF8JIGt3ErL1nrFmflC6RA-UFxRAI5E8ftIALYGkWT4
+2026-04-02 20:28:10.021 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 6659979
+2026-04-02 20:28:10.021 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:28:10.021 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:28:23.610 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:28:23.612 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:28:23.612 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199388
+2026-04-02 20:28:23.612 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:28:23.612 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:28:23.614 [http-nio-8080-exec-10] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:28:25.099 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:28:25.100 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:28:25.102 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7197898
+2026-04-02 20:28:25.102 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:28:25.102 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:28:25.104 [http-nio-8080-exec-1] INFO  c.g.c.AdminOperationLogController - 查看所有日志
+2026-04-02 20:28:27.128 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:28:27.128 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:28:27.130 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7195870
+2026-04-02 20:28:27.130 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:28:27.130 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:28:27.131 [http-nio-8080-exec-2] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:29:27.918 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:29:27.918 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:29:27.918 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:29:27.918 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:29:27.918 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7135082
+2026-04-02 20:29:27.921 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:29:27.921 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:29:27.921 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7135079
+2026-04-02 20:29:27.921 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:29:27.921 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:29:27.921 [http-nio-8080-exec-4] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:29:27.923 [http-nio-8080-exec-3] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:30:42.487 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:30:42.487 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:30:42.487 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:30:42.487 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:30:42.489 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7060511
+2026-04-02 20:30:42.489 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:30:42.489 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:30:42.489 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7060511
+2026-04-02 20:30:42.489 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:30:42.489 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:30:42.489 [http-nio-8080-exec-6] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:30:42.490 [http-nio-8080-exec-5] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:33:14.940 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:33:14.940 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:33:14.940 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:33:14.940 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:33:14.941 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 6908059
+2026-04-02 20:33:14.941 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:33:14.941 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:33:14.941 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 6908059
+2026-04-02 20:33:14.941 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:33:14.941 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:33:14.941 [http-nio-8080-exec-7] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:33:14.941 [http-nio-8080-exec-8] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:36:09.255 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:36:09.256 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:09.256 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 6733744
+2026-04-02 20:36:09.256 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:09.256 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:36:09.258 [http-nio-8080-exec-9] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:36:09.552 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:36:09.552 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:09.563 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 6733437
+2026-04-02 20:36:09.563 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:09.564 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:36:09.566 [http-nio-8080-exec-10] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:36:52.834 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:36:52.834 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:52.834 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:36:52.834 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:52.834 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 6690166
+2026-04-02 20:36:52.834 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 6690166
+2026-04-02 20:36:52.834 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:52.834 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:36:52.834 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:52.834 [http-nio-8080-exec-2] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:36:52.834 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:36:52.836 [http-nio-8080-exec-1] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:36:59.392 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:36:59.397 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:59.399 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 6683601
+2026-04-02 20:36:59.399 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:59.399 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:36:59.399 [http-nio-8080-exec-4] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：11
+2026-04-02 20:36:59.416 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:36:59.416 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:59.418 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 6683582
+2026-04-02 20:36:59.418 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:59.418 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:36:59.418 [http-nio-8080-exec-3] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：15
+2026-04-02 20:36:59.435 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:36:59.435 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:59.437 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6683563
+2026-04-02 20:36:59.437 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:59.437 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:36:59.499 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 记录管理员操作日志：adminId=0025004500, operation=AdminController.deleteRepairOrder, url=/admin
+2026-04-02 20:36:59.499 [http-nio-8080-exec-6] INFO  com.gdut.controller.AdminController - 批量删除报修单，报修单编号：[11, 15]
+2026-04-02 20:36:59.521 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:36:59.521 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:36:59.523 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 6683477
+2026-04-02 20:36:59.523 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:36:59.523 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:36:59.523 [http-nio-8080-exec-5] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:39:24.692 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:24.692 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:24.693 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 6538307
+2026-04-02 20:39:24.693 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:24.693 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:24.693 [http-nio-8080-exec-7] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:39:24.866 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:24.867 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:24.869 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 6538131
+2026-04-02 20:39:24.869 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:24.869 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:24.869 [http-nio-8080-exec-8] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:39:38.717 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:38.718 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:38.724 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 6524276
+2026-04-02 20:39:38.726 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:38.726 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:38.726 [http-nio-8080-exec-9] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:39:40.197 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:39:40.197 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:40.200 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 6522800
+2026-04-02 20:39:40.200 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:40.200 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:39:43.279 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:43.279 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:43.281 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 6519719
+2026-04-02 20:39:43.281 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:43.281 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:43.281 [http-nio-8080-exec-2] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:39:45.855 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:45.855 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:45.856 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 6517144
+2026-04-02 20:39:45.858 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:45.860 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:45.860 [http-nio-8080-exec-1] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:39:52.194 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:52.194 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:52.196 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 6510804
+2026-04-02 20:39:52.196 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:52.196 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:52.196 [http-nio-8080-exec-4] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:39:52.213 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:39:52.213 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:39:52.214 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 6510786
+2026-04-02 20:39:52.214 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:39:52.214 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:39:52.214 [http-nio-8080-exec-3] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:41:08.618 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:41:08.618 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:41:08.621 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6434379
+2026-04-02 20:41:08.621 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:41:08.621 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:41:24.378 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:41:24.380 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDAxMDMsImlhdCI6MTc3NTEzMjkwM30.RSbpQcFlxdhLO_cE5N0k-t1JorGVDhCfNNN2K3eAn_Y
+2026-04-02 20:41:24.385 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 6418615
+2026-04-02 20:41:24.387 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:41:24.387 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 20:41:54.334 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:41:54.334 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:41:54.336 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199664
+2026-04-02 20:41:54.336 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:41:54.336 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:41:54.336 [http-nio-8080-exec-8] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:41:55.793 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:41:55.793 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:41:55.796 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 7198204
+2026-04-02 20:41:55.796 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:41:55.796 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:41:55.799 [http-nio-8080-exec-9] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:42:01.068 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:42:01.069 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:42:01.074 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7192926
+2026-04-02 20:42:01.075 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:42:01.076 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:42:01.077 [http-nio-8080-exec-10] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：20
+2026-04-02 20:42:01.211 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:42:01.211 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:42:01.213 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7192787
+2026-04-02 20:42:01.213 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:42:01.213 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:42:01.214 [http-nio-8080-exec-2] INFO  com.gdut.controller.AdminController - 查看报修单详情，报修单编号：18
+2026-04-02 20:42:01.254 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:42:01.254 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:42:01.255 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7192745
+2026-04-02 20:42:01.255 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:42:01.255 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:42:01.299 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 记录管理员操作日志：adminId=0025004500, operation=UploadController.deleteImage, url=/deleteImage
+2026-04-02 20:42:01.304 [http-nio-8080-exec-1] INFO  c.gdut.controller.UploadController - 删除图片：https://dormmanasys-lv.oss-cn-beijing.aliyuncs.com/2026/04/df33b021-f476-482e-802e-bf1ca4e2f011.png
+2026-04-02 20:42:02.146 [http-nio-8080-exec-1] INFO  com.gdut.util.AliyunOSSOperator - 成功删除 OSS 文件：dormmanasys-lv/2026/04/df33b021-f476-482e-802e-bf1ca4e2f011.png
+2026-04-02 20:42:02.177 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:42:02.177 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:42:02.178 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7191822
+2026-04-02 20:42:02.179 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:42:02.179 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:42:02.223 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 记录管理员操作日志：adminId=0025004500, operation=AdminController.deleteRepairOrder, url=/admin
+2026-04-02 20:42:02.225 [http-nio-8080-exec-4] INFO  com.gdut.controller.AdminController - 批量删除报修单，报修单编号：[20, 18]
+2026-04-02 20:42:02.273 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:42:02.273 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:42:02.274 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7191726
+2026-04-02 20:42:02.274 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:42:02.274 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:42:02.277 [http-nio-8080-exec-3] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:55:53.817 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m12s532ms813µs700ns).
+2026-04-02 20:56:53.314 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:56:53.314 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:56:53.314 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 20:56:53.314 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6IjAwMjUwMDQ1MDAiLCJleHAiOjE3NzUxNDA5MTQsImlhdCI6MTc3NTEzMzcxNH0.xPmRtviJYRhVKl-bxbpjKxYJFiSeqVi2vAbn_i6Go8o
+2026-04-02 20:56:53.314 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 6300686
+2026-04-02 20:56:53.315 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:56:53.315 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:56:53.315 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6300685
+2026-04-02 20:56:53.315 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：admin
+2026-04-02 20:56:53.315 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:56:53.315 [http-nio-8080-exec-5] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:56:53.316 [http-nio-8080-exec-6] INFO  com.gdut.controller.AdminController - 查看所有报修单
+2026-04-02 20:58:19.948 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-02 20:58:19.953 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-04-02 20:58:19.956 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-02 20:58:19.959 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-02 20:59:32.347 [main] INFO  com.gdut.DormSysApplication - Starting DormSysApplication using Java 21.0.10 with PID 17444 (D:\code\java\java\DormSys_Spring\target\classes started by Bone in D:\code\java\java\DormSys_Spring)
+2026-04-02 20:59:32.351 [main] INFO  com.gdut.DormSysApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-02 20:59:33.184 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-02 20:59:33.192 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-02 20:59:33.194 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-02 20:59:33.195 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-04-02 20:59:33.229 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 818 ms
+2026-04-02 20:59:33.756 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-02 20:59:33.769 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-02 20:59:33.774 [main] INFO  com.gdut.DormSysApplication - Started DormSysApplication in 1.777 seconds (process running for 2.587)
+2026-04-02 20:59:47.435 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-02 20:59:47.437 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-02 20:59:47.438 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-02 20:59:47.589 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-02 20:59:48.015 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c1093b9
+2026-04-02 20:59:48.017 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-02 20:59:55.863 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:59:55.863 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 20:59:55.895 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7199105
+2026-04-02 20:59:55.895 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:59:55.895 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:59:55.896 [http-nio-8080-exec-6] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:59:57.084 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 20:59:57.084 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 20:59:57.086 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 7197914
+2026-04-02 20:59:57.086 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:59:57.086 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 20:59:57.086 [http-nio-8080-exec-9] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 20:59:57.936 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 20:59:57.937 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 20:59:57.939 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7197061
+2026-04-02 20:59:57.939 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 20:59:57.939 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 20:59:57.950 [http-nio-8080-exec-5] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 20:59:57.951 [http-nio-8080-exec-5] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 20:59:57.954 [http-nio-8080-exec-5] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 21:00:03.558 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:00:03.559 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:03.561 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 7191439
+2026-04-02 21:00:03.562 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:03.562 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:00:03.562 [http-nio-8080-exec-7] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 21:00:14.128 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:14.128 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:14.129 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7180871
+2026-04-02 21:00:14.129 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:14.129 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:00:15.331 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:15.333 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:15.334 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7179666
+2026-04-02 21:00:15.335 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:15.335 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:00:15.770 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:15.770 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:15.771 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7179229
+2026-04-02 21:00:15.771 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:15.771 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:00:16.107 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:16.107 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:16.109 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7178891
+2026-04-02 21:00:16.109 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:16.109 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:00:18.488 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:18.488 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:18.490 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7176510
+2026-04-02 21:00:18.490 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:18.490 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:00:22.792 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:22.793 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:22.793 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7172207
+2026-04-02 21:00:22.793 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:22.793 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:00:23.317 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:00:23.319 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:00:23.321 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7171679
+2026-04-02 21:00:23.321 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:00:23.321 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:01:56.330 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:01:56.330 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:01:56.331 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 7078669
+2026-04-02 21:01:56.331 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:01:56.331 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:01:56.742 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:01:56.743 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:01:56.744 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7078256
+2026-04-02 21:01:56.744 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:01:56.744 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:01:57.117 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:01:57.117 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:01:57.121 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 7077879
+2026-04-02 21:01:57.121 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:01:57.121 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:01:59.647 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:01:59.648 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:01:59.649 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7075351
+2026-04-02 21:01:59.649 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:01:59.649 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:00.054 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:00.054 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:00.055 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7074945
+2026-04-02 21:02:00.055 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:00.055 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:01.709 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:01.711 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:01.712 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7073288
+2026-04-02 21:02:01.712 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:01.712 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:05.436 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:05.436 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:05.437 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7069563
+2026-04-02 21:02:05.437 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:05.437 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:05.722 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:05.722 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:05.723 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7069277
+2026-04-02 21:02:05.723 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:05.723 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:06.061 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:06.062 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:06.064 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7068936
+2026-04-02 21:02:06.064 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:06.064 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:08.594 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:08.594 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:08.594 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 7066406
+2026-04-02 21:02:08.594 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:08.594 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:08.977 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:08.977 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:08.979 [http-nio-8080-exec-9] INFO  com.gdut.util.JwtUtil - 剩余时间: 7066021
+2026-04-02 21:02:08.979 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:08.979 [http-nio-8080-exec-9] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:38.909 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:38.909 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:38.909 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:02:38.909 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:38.910 [http-nio-8080-exec-7] INFO  com.gdut.util.JwtUtil - 剩余时间: 7036090
+2026-04-02 21:02:38.910 [http-nio-8080-exec-5] INFO  com.gdut.util.JwtUtil - 剩余时间: 7036090
+2026-04-02 21:02:38.910 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:38.910 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:38.910 [http-nio-8080-exec-7] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:02:38.910 [http-nio-8080-exec-5] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:02:38.911 [http-nio-8080-exec-7] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 21:02:45.309 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:02:45.309 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:45.311 [http-nio-8080-exec-3] INFO  com.gdut.util.JwtUtil - 剩余时间: 7029689
+2026-04-02 21:02:45.311 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:45.311 [http-nio-8080-exec-3] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:02:45.311 [http-nio-8080-exec-3] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 21:02:46.700 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：admin
+2026-04-02 21:02:46.700 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:02:46.702 [http-nio-8080-exec-8] INFO  com.gdut.util.JwtUtil - 剩余时间: 7028298
+2026-04-02 21:02:46.702 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:02:46.702 [http-nio-8080-exec-8] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色不匹配，响应 403
+2026-04-02 21:03:02.839 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:03:02.839 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:03:02.841 [http-nio-8080-exec-4] INFO  com.gdut.util.JwtUtil - 剩余时间: 7012159
+2026-04-02 21:03:02.841 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:03:02.841 [http-nio-8080-exec-4] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:03:02.841 [http-nio-8080-exec-4] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 21:03:09.791 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:03:09.793 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:03:09.793 [http-nio-8080-exec-10] INFO  com.gdut.util.JwtUtil - 剩余时间: 7005207
+2026-04-02 21:03:09.793 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:03:09.793 [http-nio-8080-exec-10] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:03:09.794 [http-nio-8080-exec-10] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 21:03:10.745 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:03:10.745 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:03:10.748 [http-nio-8080-exec-1] INFO  com.gdut.util.JwtUtil - 剩余时间: 7004253
+2026-04-02 21:03:10.748 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:03:10.748 [http-nio-8080-exec-1] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:03:10.748 [http-nio-8080-exec-1] INFO  com.gdut.controller.LoginController - 获取当前用户信息
+2026-04-02 21:03:13.002 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：student
+2026-04-02 21:03:13.002 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:03:13.004 [http-nio-8080-exec-2] INFO  com.gdut.util.JwtUtil - 剩余时间: 7001996
+2026-04-02 21:03:13.004 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:03:13.004 [http-nio-8080-exec-2] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色匹配，放行
+2026-04-02 21:03:13.005 [http-nio-8080-exec-2] INFO  c.gdut.controller.StudentController - 查看学生报修记录，学号：3125004500
+2026-04-02 21:03:13.005 [http-nio-8080-exec-2] INFO  c.g.service.impl.StudentServiceImpl - 查看学生报修记录，学号：3125004500
+2026-04-02 21:03:13.005 [http-nio-8080-exec-2] INFO  c.g.service.impl.StudentServiceImpl - RepairOrderQueryParam(status=, startTime=null, endTime=null, dormNum=null, page=1, pageSize=10)
+2026-04-02 21:03:34.294 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前方法需要权限：*
+2026-04-02 21:03:34.294 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 令牌:eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsImlkIjoiMzEyNTAwNDUwMCIsImV4cCI6MTc3NTE0MTk5NSwiaWF0IjoxNzc1MTM0Nzk1fQ.ttgul7eGgUA4zxqShaE9FI0UuBQzVZjInLZj3nrmVok
+2026-04-02 21:03:34.295 [http-nio-8080-exec-6] INFO  com.gdut.util.JwtUtil - 剩余时间: 6980705
+2026-04-02 21:03:34.295 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前用户角色：student
+2026-04-02 21:03:34.295 [http-nio-8080-exec-6] INFO  c.gdut.interceptor.TokenInterceptor - 当前接口任意角色都可以访问
+2026-04-02 21:03:34.295 [http-nio-8080-exec-6] INFO  com.gdut.controller.LoginController - 获取当前用户信息

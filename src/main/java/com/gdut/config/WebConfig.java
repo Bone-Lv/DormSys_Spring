@@ -31,7 +31,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOriginPatterns("http://localhost:5173")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .exposedHeaders("X-New-Token")  // 暴露所有自定义响应头
+                .exposedHeaders("X-New-Token")  // 暴露自定义响应头
                 .allowCredentials(true)
                 .maxAge(3600);
     }

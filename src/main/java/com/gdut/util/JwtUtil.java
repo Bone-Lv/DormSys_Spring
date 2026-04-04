@@ -95,7 +95,7 @@ public class JwtUtil {
 
 
     /**
-     * 判断当前令牌是否需要刷新（剩余时间少于 30 分钟就刷新）
+     * 判断当前令牌是否需要刷新
      */
     public static boolean needRefresh(String token) {
         try {
@@ -113,7 +113,7 @@ public class JwtUtil {
     }
 
     /**
-     * 刷新令牌（重新生成一个新的令牌，延长过期时间）
+     * 刷新令牌
      */
     public static String refreshToken(String token) {
         try {

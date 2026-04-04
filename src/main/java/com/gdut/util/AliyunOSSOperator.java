@@ -73,7 +73,7 @@ public class AliyunOSSOperator {
 
     /**
      * 删除 OSS 文件
-     * @param objectName OSS 文件路径，例如 2024/03/uuid.png
+     * @param objectName OSS 文件路径
      */
     public void deleteFile(String objectName) throws Exception {
         String endpoint = aliyunOSSProperties.getEndpoint();
@@ -110,8 +110,8 @@ public class AliyunOSSOperator {
 
     /**
      * 从完整 URL 中提取 OSS Object 路径
-     * @param url OSS 文件完整 URL，如 https://bucketname.endpoint/2024/03/uuid.png
-     * @return Object 路径，如 2024/03/uuid.png
+     * @param url OSS 文件完整 URL
+     * @return Object 路径
      */
     public String extractObjectKeyFromUrl(String url) {
         if (url == null || url.isEmpty()) {
